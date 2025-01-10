@@ -1,0 +1,25 @@
+[
+    {
+      "name": "Giv-Shuffler",
+      "description": "Sorts n numbers in a range, according with the count that the user chooses.",
+      "stars": 3,
+      "language": "TypeScript",
+      "url": "https://github.com/GiovaniFZ/Giv-Shuffler"
+    },
+    {
+      "name": "Mini-Calculadora",
+      "description": "Projeto React para o Postaqui.",
+      "stars": 0,
+      "language": "JavaScript",
+      "url": "https://github.com/GiovaniFZ/Mini-Calculadora"
+    },
+    {
+      "name": "MCalendar",
+      "description": "WhatsApp Calendar",
+      "stars": 0,
+      "language": "Java",
+      "url": "https://github.com/GiovaniFZ/MCalendar"
+    }
+  ]
+  
+  

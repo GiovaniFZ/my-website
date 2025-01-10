@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Bun
+bun.lockb
+
+# ts build info
+tsconfig.app.tsbuildinfo
+tsconfig.node.tsbuildinfo

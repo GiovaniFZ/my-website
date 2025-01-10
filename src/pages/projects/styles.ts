@@ -1,0 +1,59 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  padding: 2rem;
+  background-color: ${props => props.theme.background};
+  color: ${props => props.theme.text};
+  width: 100%; /* Ensure the container takes up the full width */
+`;
+
+export const Title = styled.h1`
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+`;
+
+export const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+`;
+
+export const ProjectCard = styled.a`
+  background: ${props => props.theme.cardBackground};
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: ${props => props.theme.cardText};
+  box-shadow: 0 4px 6px ${props => props.theme.cardShadow};
+  transition: transform 0.2s;
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+`;
+
+export const ProjectName = styled.h2`
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+`;
+
+export const ProjectDescription = styled.p`
+  font-size: 1rem;
+  margin-bottom: 1rem;
+`;
+
+export const ProjectMeta = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+`;
+
+export const ProjectLanguage = styled.span`
+  font-weight: bold;
+`;
+
+export const ProjectStars = styled.span`
+  color: ${props => props.theme.highlight};
+`;
