@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const IconContainer = styled.div`
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 `;
 
 export const IconLink = styled.a`
