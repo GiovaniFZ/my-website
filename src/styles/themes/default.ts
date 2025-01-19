@@ -1,7 +1,6 @@
 export const defaultTheme = {
   white: '#FFF',
   black: '#000',
-  cardBackground: '#2C3534',
   cardText: '#ffffff',
   cardShadow: 'rgba(0, 0, 0, 0.5)',
   highlight: '#ffcc00',

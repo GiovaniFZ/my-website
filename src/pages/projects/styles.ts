@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  padding: 2rem;
-  background-color: ${props => props.theme.background};
-  color: ${props => props.theme.text};
-  width: 100%; /* Ensure the container takes up the full width */
-`;
-
 export const Title = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -20,7 +13,7 @@ export const ProjectGrid = styled.div`
 `;
 
 export const ProjectCard = styled.a`
-  background: ${props => props.theme.cardBackground};
+  background: ${props => props.theme["green-400"]};
   padding: 1.5rem;
   border-radius: 8px;
   text-decoration: none;

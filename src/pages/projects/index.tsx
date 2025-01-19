@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import {
-  Container,
   Title,
   ProjectGrid,
   ProjectCard,
@@ -10,6 +9,7 @@ import {
   ProjectLanguage,
   ProjectStars,
 } from './styles';
+import { MainContainer } from '../../components/MainContent/styles';
 
 interface Repo {
   name: string;
@@ -33,7 +33,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <Container>
+    <MainContainer>
       <Title>Projects</Title>
       <ProjectGrid>
         {projects.map((project) => (
@@ -47,6 +47,6 @@ export default function Projects() {
           </ProjectCard>
         ))}
       </ProjectGrid>
-    </Container>
+    </MainContainer>
   );
 }

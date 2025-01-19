@@ -31,7 +31,7 @@ export const HeaderContainer = styled.div`
   border-radius: 8px;
   width: 100%;
   height: 70px;
-  background-color: ${props => props.theme["green-500"]};
+  background-color: ${props => props.theme["green-400"]};
   color: ${props => props.theme.white};
 
   nav {

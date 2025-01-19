@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import { Paragraph } from './styles';
+import { Button, Paragraph, TextArea } from './styles';
+import { MainContainer } from '../../components/MainContent/styles';
 
 export default function Contact() {
   const typedElement = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["This page is coming soon. Thanks for your patience :)"],
+      strings: ["If you want to contact me, you can use the links on Main section, or say something in the field below!"],
       typeSpeed: 50,
       backSpeed: 25,
       loop: false,
@@ -19,11 +20,13 @@ export default function Contact() {
   }, []);
 
   return (
-    <div>
+    <MainContainer>
       <h1>Contact</h1>
       <Paragraph>
         <span ref={typedElement} />
       </Paragraph>
-    </div>
+      <TextArea />
+      <Button>Send</Button>
+    </MainContainer>
   );
 }

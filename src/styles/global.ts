@@ -54,6 +54,5 @@ p {
 .mc{
   display: flex;
   padding: 2rem;
-  padding-top: 3rem;
 }
 `
