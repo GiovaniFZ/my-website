@@ -1,12 +1,14 @@
-import { HeaderContainer } from "./styles";
+import { HeaderContainer, NavLink, HomeLink } from "./styles";
 
 export default function Header(){
-    return(
-        <HeaderContainer>
-            <p>I'm Giv!</p>
-            <a>About me</a>
-            <a>Contact</a>
-            <a>Projects</a>
-        </HeaderContainer>
-    )
+  return(
+    <HeaderContainer>
+      <HomeLink href="/">Giv's Website</HomeLink>
+        <nav>
+          <NavLink href="/about">About Me</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
+        </nav>
+    </HeaderContainer>
+  )
 }

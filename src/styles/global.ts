@@ -1,26 +1,59 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :focus{
-    outline: 0;
-    box-shadow: 0 0 0 2px ${props => props.theme['green-500']}
+  outline: 0;
+  box-shadow: 0 0 0 2px #d4d4a1
 }
 
 body{
-    background-color: ${props => props.theme["gray-800"]};
-    color: ${props => props.theme.white};
-    -webkit-font-smoothing: antialised;
+  background-color: ${props => props.theme["gray-800"]};
+  color: ${props => props.theme.white};
+  -webkit-font-smoothing: antialised;
+  padding: 1rem;
 }
 
 body, input, textarea, button{
-    font: 400 1rem Roboto, sans-serif;
+  font: 400 1.25rem Roboto, sans-serif;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.mc{
+  display: flex;
+  padding: 2rem;
+  padding-top: 3rem;
+}
 `
