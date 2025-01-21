@@ -12,7 +12,7 @@ export const TextArea = styled.textarea`
   padding: 1rem;
   border-radius: 8px;
   background: ${props => props.theme["gray-100"]};
-`
+`;
 
 export const Button = styled.button`
 all: unset;

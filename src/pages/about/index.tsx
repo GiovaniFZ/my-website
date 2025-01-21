@@ -8,10 +8,10 @@ export default function About() {
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["Hi, I'm Giv, lemme tell you about me!", "So, I'm currently a software engineering student", "I'm also interning on a nice company located in Minas Gerais in Brazil", "And that's it!"],
+      strings: ["About me"],
       typeSpeed: 50,
       backSpeed: 25,
-      loop: true,
+      loop: false,
     });
 
     return () => {
@@ -21,9 +21,11 @@ export default function About() {
 
   return (
     <MainContainer>
-      <h1>About Me</h1>
-      <Paragraph>
+      <h1>
         <span ref={typedElement} />
+      </h1>
+      <Paragraph>
+      <span>Hi, I'm Giv, lemme tell you about me!, So, I'm currently a software engineering student, interning on a nice company located in Minas Gerais in Brazil, and that's it!</span>
       </Paragraph>
     </MainContainer>
   );

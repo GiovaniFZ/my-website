@@ -29,3 +29,5 @@ bun.lockb
 # ts build info
 tsconfig.app.tsbuildinfo
 tsconfig.node.tsbuildinfo
+
+.env
