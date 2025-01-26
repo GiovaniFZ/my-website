@@ -25,7 +25,7 @@ export default function About() {
         <span ref={typedElement} />
       </h1>
       <Paragraph>
-      <span>Hi, I'm Giv, lemme tell you about me!, So, I'm currently a software engineering student, interning on a nice company located in Minas Gerais in Brazil, and that's it!</span>
+      <span>Hi, I'm Giv, a software engineering student, interning on a nice company located in Minas Gerais in Brazil!</span>
       </Paragraph>
     </MainContainer>
   );
