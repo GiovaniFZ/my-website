@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const HomeLink = styled.a`
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   color: ${props => props.theme.white};
@@ -24,7 +26,10 @@ export const NavLink = styled.a`
 `;
 
 export const HeaderContainer = styled.div`
+  position: fixed;
   display: flex;
+  top: 0;
+  left: 0;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;

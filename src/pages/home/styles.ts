@@ -18,3 +18,12 @@ export const IconLink = styled.a`
 export const HomeLabel = styled.p`
   margin-top: 1rem;
 `;
+
+export const TopSection = styled.div`
+display: flex;
+align-items: center;
+gap: 1rem;
+span{
+  font-size: 2.3rem;
+}
+`

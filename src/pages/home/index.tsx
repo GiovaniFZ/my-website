@@ -2,8 +2,9 @@ import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { IconContainer, IconLink, HomeLabel } from './styles';
+import { IconContainer, IconLink, HomeLabel, TopSection } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
+import { Avatar } from '../../components/Avatar/avatar';
 
 export default function Home() {
   const typedElement = useRef(null);
@@ -23,9 +24,12 @@ export default function Home() {
 
   return (
     <MainContainer>
-      <h1>
-        <span ref={typedElement} />
-      </h1>
+      <TopSection>
+        <Avatar src="https://avatars.githubusercontent.com/u/53719063?v=4" alt="Giv's Gh picture" />
+        <strong>
+          <span ref={typedElement} />
+        </strong>
+      </TopSection>
       <HomeLabel>
         Hey, check My social links!
       </HomeLabel>
