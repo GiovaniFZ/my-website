@@ -8,6 +8,7 @@ import Contact from './pages/contact';
 import Projects from './pages/projects';
 import { HashRouter } from 'react-router-dom';
 import '@fontsource-variable/red-hat-display';
+import Skills from './pages/skills';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </section>
         <section id="about">
           <About />
+        </section>
+        <section id="skills">
+          <Skills />
         </section>
         <section id="contact">
           <Contact />
