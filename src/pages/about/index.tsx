@@ -1,31 +1,12 @@
-import { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
 import { Paragraph } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 
 export default function About() {
-  const typedElement = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(typedElement.current, {
-      strings: ["About me"],
-      typeSpeed: 50,
-      backSpeed: 25,
-      loop: false,
-    });
-
-    return () => {
-      typed.destroy();
-    };
-  }, []);
-
   return (
     <MainContainer>
-      <h1>
-        <span ref={typedElement} />
-      </h1>
+      <h1>About Me</h1>
       <Paragraph>
-      <span>Hi, I'm Giv, a software engineering student, interning on a nice company located in Minas Gerais in Brazil!</span>
+      <span>I'm Giv, a software engineering student interning at a nice company located in Minas Gerais, Brazil!</span>
       </Paragraph>
     </MainContainer>
   );

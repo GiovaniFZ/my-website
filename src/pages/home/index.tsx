@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
       strings: ["Hi, I'm Giv! Welcome to my website!"],
-      typeSpeed: 30,
+      typeSpeed: 70,
       backSpeed: 50,
       loop: false,
     });
@@ -31,7 +31,7 @@ export default function Home() {
         </strong>
       </TopSection>
       <HomeLabel>
-        Hey, check My social links!
+        Hey, check out my social links!
       </HomeLabel>
       <IconContainer>
         <IconLink href="https://t.me/@givfnz2" target="_blank" rel="noopener noreferrer">

@@ -7,6 +7,7 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Projects from './pages/projects';
 import { HashRouter } from 'react-router-dom';
+import '@fontsource-variable/red-hat-display';
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
       <GlobalStyle />
       <Header />
       <HashRouter>
-        <section id="home">
+        <section
+          id="home"
+          className="firstSection"
+        >
           <Home />
         </section>
         <section id="about">

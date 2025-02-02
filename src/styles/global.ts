@@ -19,8 +19,8 @@ body{
   padding: 1rem;
 }
 
-body, input, textarea, button{
-  font: 400 1.25rem Roboto, sans-serif;
+body, input, textarea, button {
+  font-family: 'Red Hat Display Variable', sans-serif;
 }
 
 h1 {
@@ -51,8 +51,12 @@ p {
   font-size: 1.25rem;
 }
 
-.mc{
+.mc {
   display: flex;
   padding: 2rem;
+}
+
+.firstSection {
+  padding-top: 3.75rem;
 }
 `
