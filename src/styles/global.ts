@@ -19,8 +19,8 @@ body{
   padding: 1rem;
 }
 
-body, input, textarea, button{
-  font: 400 1.25rem Roboto, sans-serif;
+body, input, textarea, button {
+  font-family: 'Red Hat Display Variable', sans-serif;
 }
 
 h1 {
@@ -51,8 +51,27 @@ p {
   font-size: 1.25rem;
 }
 
-.mc{
+.mc {
   display: flex;
   padding: 2rem;
 }
+
+.firstSection {
+  padding-top: 3.75rem;
+}
+
+.ico {
+  margin-right: 0.5rem;
+  height: 0.85rem;
+  width: 0.85rem;
+}
+
+.bgb {
+  background-color: ${props => props.theme["dark-cream"]};
+  color: ${props => props.theme.white};
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+};
 `

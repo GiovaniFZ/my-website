@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import Typed from 'typed.js';
+import { useState } from 'react';
 import { Button, Paragraph, TextArea } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
+import { Send } from 'lucide-react';
 
 export default function Contact() {
-  const typedElement = useRef(null);
   const emailAddress = import.meta.env.VITE_GIV_EMAIL;
   const [typedText, setTypedText] = useState('');
 
@@ -13,30 +12,18 @@ export default function Contact() {
     window.location.href = mailToTrigger
   }
 
-  useEffect(() => {
-    const typed = new Typed(typedElement.current, {
-      strings: ["Contact"],
-      typeSpeed: 50,
-      backSpeed: 25,
-      loop: false,
-    });
-
-    return () => {
-      typed.destroy();
-    };
-  }, []);
-
   return (
     <MainContainer>
-      <h1>
-        <span ref={typedElement} />
-      </h1>
+      <h1>Contact</h1>
       <Paragraph>
-        <span>If you want to contact me, you can use the links on the Main section, or say something in the field below! (It will open your email client btw)</span>
+        <span>If you want to contact me, you can use the links above, or say put in the field below to send me an email!</span>
       </Paragraph>
       <form onSubmit={handleSubmit}>
-        <TextArea onChange={(e) => setTypedText(e.target.value)} />
-        <Button type='submit'>Send</Button>
+        <TextArea
+          onChange={(e) => setTypedText(e.target.value)}
+          className="bgb"  
+        />
+        <Button type='submit'><Send className="ico" />Send</Button>
       </form>
     </MainContainer>
   );

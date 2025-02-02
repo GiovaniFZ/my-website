@@ -23,4 +23,5 @@ export const defaultTheme = {
 
   'cream': '#D4D4A1',
   'light-cream': '#F5F5DC',
+  'dark-cream': '#636342',
 }

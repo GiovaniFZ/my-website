@@ -16,7 +16,7 @@ export const IconLink = styled.a`
 `;
 
 export const HomeLabel = styled.p`
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 `;
 
 export const TopSection = styled.div`
