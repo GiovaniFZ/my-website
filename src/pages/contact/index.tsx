@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button, Paragraph, TextArea } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
+import { Send } from 'lucide-react';
 
 export default function Contact() {
   const emailAddress = import.meta.env.VITE_GIV_EMAIL;
@@ -18,8 +19,11 @@ export default function Contact() {
         <span>If you want to contact me, you can use the links above, or say put in the field below to send me an email!</span>
       </Paragraph>
       <form onSubmit={handleSubmit}>
-        <TextArea onChange={(e) => setTypedText(e.target.value)} />
-        <Button type='submit'>Send</Button>
+        <TextArea
+          onChange={(e) => setTypedText(e.target.value)}
+          className="bgb"  
+        />
+        <Button type='submit'><Send className="ico" />Send</Button>
       </form>
     </MainContainer>
   );

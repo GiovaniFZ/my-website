@@ -59,4 +59,19 @@ p {
 .firstSection {
   padding-top: 3.75rem;
 }
+
+.ico {
+  margin-right: 0.5rem;
+  height: 0.85rem;
+  width: 0.85rem;
+}
+
+.bgb {
+  background-color: ${props => props.theme["dark-cream"]};
+  color: ${props => props.theme.white};
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+};
 `
