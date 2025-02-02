@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Button, Paragraph, TextArea } from './styles';
+import { Button, TextArea } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 import { Send } from 'lucide-react';
+import { Paragraph } from '../../components/Paragraph/styles';
 
 export default function Contact() {
   const emailAddress = import.meta.env.VITE_GIV_EMAIL;
