@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["Hi, I'm Giv! Welcome to my website!"],
+      strings: ["Hi, I'm Giovani! Welcome to my website!"],
       typeSpeed: 70,
       backSpeed: 50,
       loop: false,

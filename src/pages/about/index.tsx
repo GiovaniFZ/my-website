@@ -6,7 +6,7 @@ export default function About() {
     <MainContainer>
       <h1>About Me</h1>
       <Paragraph>
-      <span>I'm Giv, a software engineering student, interning and studying in Minas Gerais, Brazil!</span>
+      <span>I'm Giovani, a software engineering student, interning and studying in Minas Gerais, Brazil!</span>
       </Paragraph>
     </MainContainer>
   );
