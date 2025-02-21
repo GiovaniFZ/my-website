@@ -3,6 +3,7 @@ import { Button, TextArea } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 import { Send } from 'lucide-react';
 import { Paragraph } from '../../components/Paragraph/styles';
+import { t } from 'i18next';
 
 export default function Contact() {
   const emailAddress = import.meta.env.VITE_GIV_EMAIL;
@@ -15,16 +16,16 @@ export default function Contact() {
 
   return (
     <MainContainer>
-      <h1>Contact</h1>
+      <h1>{t("contact")}</h1>
       <Paragraph>
-        <span>If you want to contact me, you can use the links above, or say put in the field below to send me an email!</span>
+        <span>{t("contactInfo")}</span>
       </Paragraph>
       <form onSubmit={handleSubmit}>
         <TextArea
           onChange={(e) => setTypedText(e.target.value)}
           className="bgb"  
         />
-        <Button type='submit'><Send className="ico" />Send</Button>
+        <Button type='submit'><Send className="ico" />{t("send")}</Button>
       </form>
     </MainContainer>
   );

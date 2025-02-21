@@ -7,9 +7,9 @@ export default function About() {
   const { t } = useTranslation();
   return (
     <MainContainer>
-      <h1>About Me</h1>
+      <h1>{t("about")}</h1>
       <Paragraph>
-      <span>{t("about")}</span>
+      <span>{t("aboutText")}</span>
       </Paragraph>
     </MainContainer>
   );

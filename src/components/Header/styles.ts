@@ -44,3 +44,13 @@ export const HeaderContainer = styled.div`
     gap: 1rem;
   }
 `;
+
+export const LanguageSelector = styled.select`
+  background-color: ${props => props.theme["gray-800"]};
+  color: ${props => props.theme.white};
+  border-radius: 8px;
+  padding: 5px;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+`

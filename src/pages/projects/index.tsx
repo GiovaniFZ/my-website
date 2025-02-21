@@ -10,6 +10,7 @@ import {
   ProjectStars,
 } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
+import { t } from 'i18next';
 
 interface Repo {
   name: string;
@@ -34,7 +35,7 @@ export default function Projects() {
 
   return (
     <MainContainer>
-      <Title>Projects</Title>
+      <Title>{t("projects")}</Title>
       <ProjectGrid>
         {projects.map((project) => (
           <ProjectCard key={project.name} href={project.url} target="_blank" rel="noopener noreferrer">

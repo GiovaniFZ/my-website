@@ -5,13 +5,14 @@ import { faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IconContainer, IconLink, HomeLabel, TopSection } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 import { Avatar } from '../../components/Avatar/avatar';
+import { t } from 'i18next';
 
 export default function Home() {
   const typedElement = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["Hi, I'm Giovani! Welcome to my website!"],
+      strings: [t("welcome")],
       typeSpeed: 70,
       backSpeed: 50,
       loop: false,
@@ -31,7 +32,7 @@ export default function Home() {
         </strong>
       </TopSection>
       <HomeLabel>
-        Hey, check out my social links!
+        {t("checkSocialLinks")}
       </HomeLabel>
       <IconContainer>
         <IconLink href="https://t.me/@givfnz2" target="_blank" rel="noopener noreferrer">
