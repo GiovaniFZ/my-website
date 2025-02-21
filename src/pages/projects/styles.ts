@@ -10,6 +10,9 @@ export const ProjectGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   width: 100%;
+  @media(max-width: 512px){
+    display: block;
+  }
 `;
 
 export const ProjectCard = styled.a`
@@ -25,11 +28,18 @@ export const ProjectCard = styled.a`
   &:hover {
     transform: translateY(-5px);
   }
+  @media(max-width: 512px){
+    display: block;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ProjectName = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  @media(max-width: 512px){
+    font-size: 1.3rem;
+  }
 `;
 
 export const ProjectDescription = styled.p`

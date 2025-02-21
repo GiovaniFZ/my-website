@@ -26,4 +26,8 @@ gap: 1rem;
 span{
   font-size: 2.3rem;
 }
+@media (max-width: 448px) {
+  display: block;
+  font-size: 1rem;
+}
 `
