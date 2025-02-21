@@ -1,7 +1,7 @@
-# my-website
+# Giv's Website
 
 ## Introduction
-Hey, this is my website! The "Giv's website"
+Hey, this is my website! You will be able to know what I'm good on and how to contact me through there.
 
 ## Used Technologies
 - React
@@ -9,7 +9,7 @@ Hey, this is my website! The "Giv's website"
 - Vite
 
 ## How to access?
-If you want to check the deploy, visit the project repo on [Github](https://github.com/GiovaniFZ/my-website).
+If you want to check the deploy, visit the project repo on [Gitea](https://git.pontusmail.org/GivFNZ/my-website).
 The access link will be availble on link section.
 
 ## Contributions
