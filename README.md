@@ -1,7 +1,7 @@
 # Giv's Website
 
 ## Introduction
-Hey, this is my website! You will be able to know what I'm good on and how to contact me through there."
+Hey, this is my website! You will be able to know what I'm good on and how to contact me through there.
 
 ## Used Technologies
 - React
