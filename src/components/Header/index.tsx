@@ -7,7 +7,7 @@ import { t } from "i18next";
 export default function Header() {
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     i18n.changeLanguage(event.target.value);
-    localStorage.setItem("language", event.target.value); // Salva escolha do usuário
+    localStorage.setItem("language", event.target.value);
   };
   return (
     <HashRouter>

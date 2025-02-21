@@ -5,6 +5,7 @@ display: flex;
 flex-direction: row;
 margin-top: 1rem;
 align-items: center;
+justify-content: center;
 p {
     margin-left: 0.3rem;
     margin-right: 2.5rem;
