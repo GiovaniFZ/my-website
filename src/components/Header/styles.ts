@@ -23,6 +23,9 @@ export const NavLink = styled.a`
   &:hover {
     color: ${props => props.theme["cream"]};
   }
+  @media(max-width: 640px){
+    display: none;
+  }
 `;
 
 export const HeaderContainer = styled.div`
