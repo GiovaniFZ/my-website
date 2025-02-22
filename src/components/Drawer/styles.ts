@@ -28,6 +28,11 @@ export const DrawerContainer = styled.div`
   width: 200px;
   background-color: ${(props) => props.theme["gray-800"]};
   animation-name: drawerAnimation;
+  animation-duration: 0.3s;
+  @keyframes drawerAnimation {
+    0% {width: 0px};
+    100% {width: 200px};
+}
 `
 
 export const DrawerItem = styled.a`
@@ -36,6 +41,20 @@ padding: 1rem;
 display: block;
 color: white;
 cursor: pointer;
+animation-name: slideIn;
+animation-duration: 0.5s;
+
+@keyframes slideIn{
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 &:hover {
     color: ${props => props.theme.cream}
 }
