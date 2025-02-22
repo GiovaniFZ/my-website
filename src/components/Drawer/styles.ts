@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const Drawer = styled.button`
 all: unset;
@@ -12,6 +12,10 @@ display: none;
 }
 &::after {
     content: "☰";
+}
+&:focus {
+  outline: none;
+  border: 0;
 }
 @media(max-width: 640px){
   display: block;

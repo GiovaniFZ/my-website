@@ -5,4 +5,7 @@ export const MainContainer = styled.div`
     margin: 3rem;
     background-color: ${props => props.theme["gray-700"]};
     border-radius: 8px;
+    @media(max-width: 640px){
+        margin: 0 0 3rem 0;
+    }
 `

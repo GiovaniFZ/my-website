@@ -27,7 +27,7 @@ span{
   font-size: 2.3rem;
 }
 @media (max-width: 448px) {
-  display: block;
+  flex-direction: column;
   font-size: 1rem;
 }
 `

@@ -18,7 +18,7 @@ export default function Header() {
         <HeaderContainer>
           <HomeLink href="/">
             <AvatarHeader src="https://avatars.githubusercontent.com/u/53719063?v=4" alt="Giv's Gh picture" />
-            Giv's Website
+            <span>Giv's Website</span>
           </HomeLink>
           <nav>
             <NavLink href="#about">{t("about")}</NavLink>

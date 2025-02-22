@@ -6,6 +6,7 @@ import { IconContainer, IconLink, HomeLabel, TopSection } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 import { Avatar } from '../../components/Avatar/avatar';
 import { t } from 'i18next';
+import { Paragraph } from '../../components/Paragraph/styles';
 
 export default function Home() {
   const typedElement = useRef(null);
@@ -27,9 +28,9 @@ export default function Home() {
     <MainContainer>
       <TopSection>
         <Avatar src="https://avatars.githubusercontent.com/u/53719063?v=4" alt="Giv's Gh picture" />
-        <strong>
+        <Paragraph>
           <span ref={typedElement} />
-        </strong>
+        </Paragraph>
       </TopSection>
       <HomeLabel>
         {t("checkSocialLinks")}
