@@ -19,4 +19,8 @@ Any contribution is welcome. If you want to test the website in your own machine
 
 Then it will be available at localhost://5173.
 
+## Special Thanks
+- [Aidan](https://github.com/ihatenodejs)
+- [lucmsilva](https://github.com/lucmsilva651/)
+
 Enjoy!
