@@ -37,7 +37,7 @@ function App() {
       </HashRouter>
       <footer>
         <p>© 2025 GivFNZ</p>
-        <p>Version: 1.1.9</p>
+        <p>Version: 1.1.10</p>
       </footer>
     </ThemeProvider>
   );

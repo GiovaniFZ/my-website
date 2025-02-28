@@ -4,18 +4,19 @@ import { AvatarHeader } from "../Avatar/avatar";
 import i18n from "../../utils/i18n";
 import { t } from "i18next";
 import { Drawer, DrawerContainer, DrawerItem } from "../Drawer/styles";
-import { useState } from "react";
+import useDrawerVisible from "../../hooks/useDrawerVisible";
 
 export default function Header() {
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     i18n.changeLanguage(event.target.value);
     localStorage.setItem("language", event.target.value);
   };
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const { ref, openDrawer, setOpenDrawer } = useDrawerVisible();
   return (
     <>
       <HashRouter>
-        <HeaderContainer>
+        <HeaderContainer ref={ref}>
+          <Drawer onClick={() => setOpenDrawer(!openDrawer)} />
           <HomeLink href="/">
             <AvatarHeader src="https://avatars.githubusercontent.com/u/53719063?v=4" alt="Giv's Gh picture" />
             <span>Giv's Website</span>
@@ -24,7 +25,6 @@ export default function Header() {
             <NavLink href="#about">{t("about")}</NavLink>
             <NavLink href="#contact">{t("contact")}</NavLink>
             <NavLink href="#projects">{t("projects")}</NavLink>
-            <Drawer onClick={() => setOpenDrawer(!openDrawer)} />
             <LanguageSelector onChange={changeLanguage}>
               <option value="pt-br">
                 Português
