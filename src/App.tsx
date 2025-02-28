@@ -9,6 +9,7 @@ import Projects from './pages/projects';
 import { HashRouter } from 'react-router-dom';
 import '@fontsource-variable/red-hat-display';
 import Skills from './pages/skills';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -35,10 +36,7 @@ function App() {
           <Projects />
         </section>
       </HashRouter>
-      <footer>
-        <p>© 2025 GivFNZ</p>
-        <p>Version: 1.1.11</p>
-      </footer>
+      <Footer />
     </ThemeProvider>
   );
 }
