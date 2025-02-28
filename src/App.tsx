@@ -35,6 +35,10 @@ function App() {
           <Projects />
         </section>
       </HashRouter>
+      <footer>
+        <p>© 2025 GivFNZ</p>
+        <p>Version: 1.1.9</p>
+      </footer>
     </ThemeProvider>
   );
 }
