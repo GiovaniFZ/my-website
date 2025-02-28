@@ -10,7 +10,7 @@ import {
   ProjectStars,
 } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 interface Repo {
   name: string;
@@ -21,6 +21,7 @@ interface Repo {
 }
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState<Repo[]>([]);
 
   useEffect(() => {

@@ -3,9 +3,10 @@ import { Button, TextArea } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 import { Send } from 'lucide-react';
 import { Paragraph } from '../../components/Paragraph/styles';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const emailAddress = import.meta.env.VITE_GIV_EMAIL;
   const [typedText, setTypedText] = useState('');
 

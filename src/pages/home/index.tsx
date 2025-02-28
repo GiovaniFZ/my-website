@@ -5,10 +5,12 @@ import { faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IconContainer, IconLink, HomeLabel, TopSection } from './styles';
 import { MainContainer } from '../../components/MainContent/styles';
 import { Avatar } from '../../components/Avatar/avatar';
-import { t } from 'i18next';
 import { Paragraph } from '../../components/Paragraph/styles';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../utils/i18n';
 
 export default function Home() {
+  const { t } = useTranslation();
   const typedElement = useRef(null);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export default function Home() {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [i18n.language]);
 
   return (
     <MainContainer>

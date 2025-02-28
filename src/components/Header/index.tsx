@@ -2,11 +2,12 @@ import { HashRouter } from "react-router-dom";
 import { HeaderContainer, NavLink, HomeLink, LanguageSelector } from "./styles";
 import { AvatarHeader } from "../Avatar/avatar";
 import i18n from "../../utils/i18n";
-import { t } from "i18next";
 import { Drawer, DrawerContainer, DrawerItem } from "../Drawer/styles";
 import useDrawerVisible from "../../hooks/useDrawerVisible";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     i18n.changeLanguage(event.target.value);
     localStorage.setItem("language", event.target.value);

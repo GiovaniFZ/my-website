@@ -2,9 +2,10 @@ import { MainContainer } from "../../components/MainContent/styles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAndroid, faAngular, faGit, faLinux, faNode, faReact, faWindows } from '@fortawesome/free-brands-svg-icons'
 import { SkillsContainer } from "./styles";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export default function Skills() {
+    const { t } = useTranslation();
     return (
         <MainContainer>
             <h1>{t("skills")}</h1>
