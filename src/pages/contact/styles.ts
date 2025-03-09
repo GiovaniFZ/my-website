@@ -6,7 +6,6 @@ export const TextArea = styled.textarea`
   width: 100%;
   padding: 1rem;
   border-radius: 8px;
-  background: ${props => props.theme["gray-100"]};
 `;
 
 export const Button = styled.button`
