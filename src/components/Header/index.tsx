@@ -27,11 +27,11 @@ export default function Header() {
             <NavLink href="#contact">{t("contact")}</NavLink>
             <NavLink href="#projects">{t("projects")}</NavLink>
             <LanguageSelector onChange={changeLanguage}>
-              <option value="pt-br">
-                Português
-              </option>
               <option value="en-us">
                 English
+              </option>
+              <option value="pt-br">
+                Português
               </option>
             </LanguageSelector>
           </nav>
