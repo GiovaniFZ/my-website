@@ -8,13 +8,12 @@ export default function Music() {
         queryKey: ['song'],
         queryFn: getRecentTracks
     })
-    const { recenttracks } = lastResponse
-    const { track } = recenttracks
-    const lastTrack = track[0]
     return (
         <MainContainer>
             <h1>My Last FM Status</h1>
-            <Paragraph>{lastTrack.name} - {lastTrack.artist["#text"]}</Paragraph>
+            <h2>Check my last played song!</h2>
+            <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
+            <a href={lastResponse?.recenttracks?.track[0].url}>Check this song on LastFM</a>
         </MainContainer>
     )
 }
