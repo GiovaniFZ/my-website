@@ -26,7 +26,7 @@ export default function Header() {
             <NavLink href="#about">{t("about")}</NavLink>
             <NavLink href="#contact">{t("contact")}</NavLink>
             <NavLink href="#projects">{t("projects")}</NavLink>
-            <LanguageSelector onChange={changeLanguage}>
+            <LanguageSelector onChange={changeLanguage} defaultValue={i18n.language.toLowerCase()}>
               <option value="en-us">
                 English
               </option>
@@ -42,6 +42,7 @@ export default function Header() {
             <DrawerItem href="#about">{t("about")}</DrawerItem>
             <DrawerItem href="#contact">{t("contact")}</DrawerItem>
             <DrawerItem href="#projects">{t("projects")}</DrawerItem>
+            <DrawerItem href="#music">{t("music")}</DrawerItem>
           </DrawerContainer>
         }
       </HashRouter>
