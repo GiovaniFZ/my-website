@@ -14,9 +14,10 @@ export default function Music() {
     return (
         <MainContainer>
             <h1>{t("myLast")}</h1>
-            <h2>{t("myLastDescription")}</h2>
+            <h3>{t("myLastDescription")}</h3>
             <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
-            <a href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</a>
+            <a target="blank" href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</a>
+            <Paragraph>Last update: {lastResponse?.recenttracks?.track[0]?.date["#text"]} UTC</Paragraph>
         </MainContainer>
     )
 }

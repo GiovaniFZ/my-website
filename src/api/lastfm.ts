@@ -15,8 +15,19 @@ export interface getRecentTracksResponse {
                 mbid: string,
                 name: string,
                 url: string,
+                date: {
+                    uts: string,
+                    "#text": string
+                }
             }
-        ]
+        ],
+        "@attr": {
+            user: string,
+            totalPages: string,
+            page: string,
+            perPage: string,
+            total: string
+        }
     }
 }
 
@@ -26,7 +37,8 @@ export async function getRecentTracks() {
             api_key,
             method: 'user.getrecenttracks',
             user: 'givfnz',
-            format: 'json'
+            format: 'json',
+            limit: 1
         }
     })
     return response.data
