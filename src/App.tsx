@@ -9,7 +9,10 @@ import Projects from './pages/projects';
 import { HashRouter } from 'react-router-dom';
 import '@fontsource-variable/red-hat-display';
 import Skills from './pages/skills';
+import Music from './pages/music';
 import Footer from './components/Footer';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './lib/react-query';
 
 function App() {
   return (
@@ -26,15 +29,20 @@ function App() {
         <section id="about">
           <About />
         </section>
-        <section id="skills">
-          <Skills />
-        </section>
         <section id="contact">
           <Contact />
+        </section>
+        <section id="skills">
+          <Skills />
         </section>
         <section id="projects">
           <Projects />
         </section>
+        <QueryClientProvider client={queryClient}>
+          <section id="music">
+            <Music />
+          </section>
+        </QueryClientProvider>
       </HashRouter>
       <Footer />
     </ThemeProvider>
