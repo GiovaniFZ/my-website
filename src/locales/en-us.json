@@ -7,5 +7,8 @@
     "welcome": "Hi, I'm Giovani! Welcome to my website!",
     "skills": "Skills",
     "projects": "Projects",
-    "send": "Send"
+    "send": "Send",
+    "myLast": "My Last.FM Status",
+    "myLastDescription": "Take a look on my last played song:",
+    "lastLink": "Check this song page on Last.FM"
 }
