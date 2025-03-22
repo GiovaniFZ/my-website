@@ -33,6 +33,7 @@ export const DrawerContainer = styled.div`
   background-color: ${(props) => props.theme["gray-800"]};
   animation-name: drawerAnimation;
   animation-duration: 0.3s;
+  z-index: 2;
   @keyframes drawerAnimation {
     0% {width: 0px};
     100% {width: 200px};
