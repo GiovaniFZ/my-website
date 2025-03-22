@@ -41,6 +41,7 @@ export const HeaderContainer = styled.div`
   height: 70px;
   background-color: ${props => props.theme["green-400"]};
   color: ${props => props.theme.white};
+  z-index: 1;
 
   nav {
     display: flex;

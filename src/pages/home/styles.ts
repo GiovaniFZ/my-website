@@ -9,6 +9,7 @@ export const IconContainer = styled.div`
 export const IconLink = styled.a`
   color: ${props => props.theme["light-cream"]};
   transition: color 0.3s;
+  text-decoration: none;
 
   &:hover {
     color: ${props => props.theme["cream"]};

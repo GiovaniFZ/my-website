@@ -67,7 +67,7 @@ p {
 }
 
 .bgb {
-  background-color: ${props => props.theme["dark-cream"]};
+  background-color: ${props => props.theme["gray-600"]};
   color: ${props => props.theme.white};
   border: none;
   &:focus {

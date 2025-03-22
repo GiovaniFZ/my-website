@@ -16,7 +16,7 @@ export const ProjectGrid = styled.div`
 `;
 
 export const ProjectCard = styled.a`
-  background: ${props => props.theme["green-400"]};
+  background: ${props => props.theme["green-500"]};
   padding: 1.5rem;
   border-radius: 8px;
   text-decoration: none;
