@@ -6,6 +6,7 @@ export const TextArea = styled.textarea`
   width: 100%;
   padding: 1rem;
   border-radius: 8px;
+  resize: none;
 `;
 
 export const Button = styled.button`

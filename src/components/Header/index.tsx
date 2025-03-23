@@ -40,6 +40,7 @@ export default function Header() {
           <DrawerContainer onClick={() => setOpenDrawer(false)}>
             <DrawerItem>Giv's Website</DrawerItem>
             <DrawerItem href="#about">{t("about")}</DrawerItem>
+            <DrawerItem href="#skills">{t("skills")}</DrawerItem>
             <DrawerItem href="#contact">{t("contact")}</DrawerItem>
             <DrawerItem href="#projects">{t("projects")}</DrawerItem>
             <DrawerItem href="#music">{t("music")}</DrawerItem>
