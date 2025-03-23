@@ -11,5 +11,7 @@
     "myLast": "Meu status do Last.FM",
     "myLastDescription": "Dê uma olhada na música que eu estava ouvindo:",
     "lastLink": "Clique aqui para ver a música no Last.FM",
-    "music": "Música"
+    "music": "Música",
+    "currentlyListening": "Eu estou ouvindo neste momento!",
+    "lastUpdate": "Última atualização: "
 }

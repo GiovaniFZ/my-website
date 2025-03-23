@@ -18,7 +18,10 @@ export default function Music() {
             <h3>{t("myLastDescription")}</h3>
             <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
             <IconLink target="blank" href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</IconLink>
-            <Paragraph>Last update: {lastResponse?.recenttracks?.track[0]?.date["#text"]} UTC</Paragraph>
+            {lastResponse?.recenttracks?.track[0]?.date?.["#text"] ?
+                <Paragraph>{t("lastUpdate")}{lastResponse?.recenttracks?.track[0]?.date["#text"]} UTC</Paragraph>
+                : <Paragraph>{t("currentlyListening")}</Paragraph>
+            }
         </MainContainer>
     )
 }
