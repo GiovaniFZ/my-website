@@ -24,7 +24,10 @@ dist-ssr
 *.sw?
 
 # Bun
-bun.lockb
+bun.lock*
+
+# pnpm
+pnpm-lock.yaml
 
 # ts build info
 tsconfig.app.tsbuildinfo
