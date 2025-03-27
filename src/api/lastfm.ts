@@ -1,6 +1,6 @@
 import { api } from "../lib/axios";
 
-const api_key = import.meta.env.VITE_LASTFM_API_KEY
+const api_key = null;
 
 export interface getRecentTracksResponse {
     recenttracks: {
