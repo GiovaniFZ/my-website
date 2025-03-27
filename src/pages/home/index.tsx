@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <MainContainer>
       <TopSection>
-        <Avatar src="https://avatars.githubusercontent.com/u/53719063?v=4" alt="Giv's Gh picture" />
+        <Avatar src="https://avatars.githubusercontent.com/u/53719063?v=4" alt="GitHub Profile Picture" />
         <Paragraph>
           <span ref={typedElement} />
         </Paragraph>

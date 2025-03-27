@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Paragraph } from "../../components/Paragraph/styles";
 import { useTranslation } from "react-i18next";
 import { IconLink } from "../home/styles";
-
+import { MusicDescription, MusicTitle } from "./styles";
 
 export default function Music() {
     const { t } = useTranslation()
@@ -14,8 +14,8 @@ export default function Music() {
     })
     return (
         <MainContainer>
-            <h1>{t("myLast")}</h1>
-            <h3>{t("myLastDescription")}</h3>
+            <MusicTitle>{t("myLast")}</MusicTitle>
+            <MusicDescription>{t("myLastDescription")}</MusicDescription>
             <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
             <IconLink target="blank" href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</IconLink>
             {lastResponse?.recenttracks?.track[0]?.date?.["#text"] ?

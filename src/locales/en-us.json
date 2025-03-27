@@ -9,8 +9,8 @@
     "projects": "Projects",
     "send": "Send",
     "myLast": "My Last.FM Status",
-    "myLastDescription": "Take a look on my last played song:",
-    "lastLink": "Check this song page on Last.FM",
+    "myLastDescription": "I'm listening to:",
+    "lastLink": "View on Last.FM",
     "music": "Music",
     "currentlyListening": "I'm currently listening to it!",
     "lastUpdate": "Last update: "
