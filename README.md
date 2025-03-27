@@ -31,6 +31,22 @@ Any contribution is welcome. If you want to test the website in your own machine
 
 The development server will be available at http://localhost:5173.
 
+### Environment Variables
+
+**The LastFM feature is disabled, and this environment variable is not required yet.**
+
+To run the project, you need to set up the following environment variables:
+
+| Variable                    | Description              |
+|-----------------------------|--------------------------|
+| `VITE_LASTFM_API_KEY`       | Your [Last.fm API Key]() |
+
+Create a `.env` file in the root of the project and add the required variables like so:
+
+```env
+VITE_LASTFM_API_KEY=your-lastfm-api-key-here
+```
+
 ## Special Thanks
 
 - [Aidan](https://github.com/ihatenodejs)
