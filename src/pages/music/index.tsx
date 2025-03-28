@@ -12,16 +12,19 @@ export default function Music() {
         queryKey: ['song'],
         queryFn: getRecentTracks
     })
-    return (
-        <MainContainer>
-            <MusicTitle>{t("myLast")}</MusicTitle>
-            <MusicDescription>{t("myLastDescription")}</MusicDescription>
-            <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
-            <IconLink target="blank" href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</IconLink>
-            {lastResponse?.recenttracks?.track[0]?.date?.["#text"] ?
-                <Paragraph>{t("lastUpdate")}{lastResponse?.recenttracks?.track[0]?.date["#text"]} UTC</Paragraph>
-                : <Paragraph>{t("currentlyListening")}</Paragraph>
-            }
-        </MainContainer>
-    )
+    const isAvailable = false;
+    if(isAvailable){
+        return (
+            <MainContainer>
+                <MusicTitle>{t("myLast")}</MusicTitle>
+                <MusicDescription>{t("myLastDescription")}</MusicDescription>
+                <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
+                <IconLink target="blank" href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</IconLink>
+                {lastResponse?.recenttracks?.track[0]?.date?.["#text"] ?
+                    <Paragraph>{t("lastUpdate")}{lastResponse?.recenttracks?.track[0]?.date["#text"]} UTC</Paragraph>
+                    : <Paragraph>{t("currentlyListening")}</Paragraph>
+                }
+            </MainContainer>
+        )
+    }
 }
