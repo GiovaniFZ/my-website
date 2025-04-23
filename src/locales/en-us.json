@@ -10,8 +10,10 @@
     "send": "Send",
     "myLast": "My Last.FM Status",
     "myLastDescription": "I'm listening to:",
+    "lastPlayed": "Last played song:",
     "lastLink": "View on Last.FM",
     "music": "Music",
     "currentlyListening": "I'm currently listening to it!",
-    "lastUpdate": "Last update: "
+    "lastUpdate": "Last update: ",
+    "noRecentTracks": "No recent tracks found"
 }
