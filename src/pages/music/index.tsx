@@ -1,4 +1,4 @@
-import { getRecentTracks } from "../../api/lastfm";
+import { getRecentTracks, TrackResponse } from "../../api/lastfm";
 import { MainContainer } from "../../components/MainContent/styles";
 import { useQuery } from '@tanstack/react-query'
 import { Paragraph } from "../../components/Paragraph/styles";
@@ -8,22 +8,48 @@ import { MusicDescription, MusicTitle } from "./styles";
 
 export default function Music() {
     const { t } = useTranslation()
-    const { data: lastResponse } = useQuery({
+    const { data: lastResponse, isLoading, isError, error } = useQuery<TrackResponse>({
         queryKey: ['song'],
-        queryFn: getRecentTracks
+        queryFn: getRecentTracks,
+        retry: 1,
+        refetchOnWindowFocus: false
     })
-    const isAvailable = false;
-    if(isAvailable){
+    
+    const isAvailable = true;
+    if (isAvailable){
+        const track = lastResponse?.track;
+        const isCurrentlyPlaying = !track?.date?.["#text"];
+        
         return (
             <MainContainer>
                 <MusicTitle>{t("myLast")}</MusicTitle>
-                <MusicDescription>{t("myLastDescription")}</MusicDescription>
-                <Paragraph>{lastResponse?.recenttracks?.track[0].name} - {lastResponse?.recenttracks?.track[0].artist["#text"]}</Paragraph>
-                <IconLink target="blank" href={lastResponse?.recenttracks?.track[0].url}>{t("lastLink")}</IconLink>
-                {lastResponse?.recenttracks?.track[0]?.date?.["#text"] ?
-                    <Paragraph>{t("lastUpdate")}{lastResponse?.recenttracks?.track[0]?.date["#text"]} UTC</Paragraph>
-                    : <Paragraph>{t("currentlyListening")}</Paragraph>
-                }
+                
+                {isLoading ? (
+                    <Paragraph>Loading music data...</Paragraph>
+                ) : isError ? (
+                    <>
+                        <Paragraph>Error loading music data</Paragraph>
+                        <Paragraph>Error details: {error instanceof Error ? error.message : String(error)}</Paragraph>
+                    </>
+                ) : (
+                    <>
+                        <MusicDescription>
+                            {isCurrentlyPlaying ? t("myLastDescription") : t("lastPlayed")}
+                        </MusicDescription>
+                        {track ? (
+                            <>
+                                <Paragraph>{track.name} - {track.artist["#text"]}</Paragraph>
+                                <IconLink target="blank" href={track.url}>{t("lastLink")}</IconLink>
+                                {isCurrentlyPlaying ? 
+                                    <Paragraph>{t("currentlyListening")}</Paragraph>
+                                    : <Paragraph>{t("lastUpdate")}{track.date?.["#text"]} UTC</Paragraph>
+                                }
+                            </>
+                        ) : (
+                            <Paragraph>{t("noRecentTracks")}</Paragraph>
+                        )}
+                    </>
+                )}
             </MainContainer>
         )
     }

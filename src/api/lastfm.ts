@@ -1,45 +1,61 @@
 import { api } from "../lib/axios";
 
-const api_key = null;
+export interface TrackResponse {
+    track: {
+        album: {
+            mbid: string,
+            "#text": string
+        },
+        artist: {
+            mbid: string,
+            "#text": string
+        },
+        date: {
+            uts: string,
+            "#text": string
+        },
+        image: [{
+            "#text": string,
+            size: string
+        }],
+        mbid: string,
+        name: string,
+        streamable: string,
+        url: string
+    }
+}
 
 export interface getRecentTracksResponse {
     recenttracks: {
-        track: [
-            {
-                artist: {
-                    mbid: string,
-                    "#text": string
-                },
-                streamable: string,
-                image: [],
+        track: [{
+            artist: {
                 mbid: string,
-                name: string,
-                url: string,
-                date: {
-                    uts: string,
-                    "#text": string
-                }
+                "#text": string
+            },
+            streamable: string,
+            image: [{
+                "#text": string,
+                size: string
+            }],
+            mbid: string,
+            name: string,
+            url: string,
+            date: {
+                uts: string,
+                "#text": string
             }
-        ],
-        "@attr": {
-            user: string,
-            totalPages: string,
-            page: string,
-            perPage: string,
-            total: string
-        }
+        }]
     }
 }
 
 export async function getRecentTracks() {
-    const response = await api.get<getRecentTracksResponse>('/', {
-        params: {
-            api_key,
-            method: 'user.getrecenttracks',
-            user: 'givfnz',
-            format: 'json',
-            limit: 1
-        }
-    })
-    return response.data
+    try {
+        const response = await api.get<TrackResponse>('');
+        console.log('Last.fm data:', response.data);
+        
+        return response.data;
+    } catch (error) {
+        console.error('Err while fetching Last.fm data:', error);
+        throw error;
+    }
 }
