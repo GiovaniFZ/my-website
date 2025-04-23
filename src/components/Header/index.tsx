@@ -2,7 +2,7 @@ import { HashRouter } from "react-router-dom";
 import { HeaderContainer, NavLink, HomeLink, LanguageSelector } from "./styles";
 import { AvatarHeader } from "../Avatar/avatar";
 import i18n from "../../utils/i18n";
-import { Drawer, DrawerContainer, DrawerItem } from "../Drawer/styles";
+import { Drawer, DrawerContainer, DrawerItem, DrawerTitle } from "../Drawer/styles";
 import useDrawerVisible from "../../hooks/useDrawerVisible";
 import { useTranslation } from "react-i18next";
 
@@ -13,6 +13,7 @@ export default function Header() {
     localStorage.setItem("language", event.target.value);
   };
   const { ref, openDrawer, setOpenDrawer } = useDrawerVisible();
+  
   return (
     <>
       <HashRouter>
@@ -38,7 +39,7 @@ export default function Header() {
         </HeaderContainer>
         {openDrawer &&
           <DrawerContainer onClick={() => setOpenDrawer(false)}>
-            <DrawerItem>Giv's Website</DrawerItem>
+            <DrawerTitle>Giv's Website</DrawerTitle>
             <DrawerItem href="#about">{t("about")}</DrawerItem>
             <DrawerItem href="#skills">{t("skills")}</DrawerItem>
             <DrawerItem href="#contact">{t("contact")}</DrawerItem>

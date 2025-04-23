@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
+{/* this is misaligned */}
 export const Drawer = styled.button`
 all: unset;
 color: white;
 cursor: pointer;
 transition: color 0.3s;
 display: none;
+font-size: 1.5rem;
 
 &:hover {
     color: ${props => props.theme.cream}
@@ -63,4 +65,23 @@ animation-duration: 0.5s;
 &:hover {
     color: ${props => props.theme.cream}
 }
+`
+
+export const DrawerTitle = styled.h4`
+  text-align: center;
+  margin-top: 1rem;
+  color: white;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 `
