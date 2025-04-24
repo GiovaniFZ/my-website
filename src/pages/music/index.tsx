@@ -1,4 +1,4 @@
-import { getRecentTracks, TrackResponse } from "../../api/lastfm";
+import { getRecentTracks } from "../../api/lastfm";
 import { MainContainer } from "../../components/MainContent/styles";
 import { useQuery } from '@tanstack/react-query'
 import { Paragraph } from "../../components/Paragraph/styles";
@@ -8,7 +8,7 @@ import { MusicDescription, MusicTitle } from "./styles";
 
 export default function Music() {
     const { t } = useTranslation()
-    const { data: lastResponse, isLoading, isError, error } = useQuery<TrackResponse>({
+    const { data: lastResponse, isLoading, isError, error } = useQuery({
         queryKey: ['song'],
         queryFn: getRecentTracks,
         retry: 1,

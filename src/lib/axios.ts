@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const defaultApiUrl = 'https://lastfm-last-played.biancarosa.com.br/givfnz/latest-song';
+const username = import.meta.env.VITE_LAST_USERNAME;
+const defaultApiUrl = `https://lastfm-last-played.biancarosa.com.br/${username}`;
 
 export const api = axios.create({
-    baseURL: import.meta.env.VITE_LASTFM_API_URL || defaultApiUrl,
+    baseURL: defaultApiUrl,
 })
